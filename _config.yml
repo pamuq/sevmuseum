@@ -5,7 +5,7 @@ permalink: /:year/:month/:title/
 
 url: http://pamuq.github.io/sevmuseum
 # Uncomment for local testing
-#url: http://127.0.0.1:4000/ 
+#url: http://127.0.0.1:4000
 
 author:
     name: Pamuq Araştırıcı

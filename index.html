@@ -30,7 +30,19 @@ layout: default
 		<li>
 			<figure>
 				<img src="{{ site.url }}/img/large/{{ post.photo }}" alt="img"/>
-				<figcaption><h3>{{ post.caption_header}}</h3><p>{{ post.caption }}</p></figcaption>
+				<figcaption><h3>{{ post.caption_header}}</h3>{{ post.date | date_to_long_string }}<p>{{ post.caption }}</p>
+				<!-- Comments -->
+				<div id="disqus_thread"></div>
+				<script type="text/javascript">
+				var disqus_shortname = 'sevmuseum';
+				var discus_identifier = '{{ post.url }}';
+				(function() {
+					var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+					dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+					(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+					})();
+				</script>
+				</figcaption>
 			</figure>
 		</li>
 		{% endfor %}
